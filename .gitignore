@@ -1,4 +1,4 @@
-# Connect AI auto-generated
+﻿# Connect AI auto-generated
 .DS_Store
 .obsidian/
 .trash/
@@ -8,10 +8,10 @@ node_modules/
 .cache/
 Thumbs.db
 
-# Connect AI 소스코드 (수만 개 에셋 파일 포함, GitHub 불필요)
+# Connect AI ?뚯뒪肄붾뱶 (?섎쭔 媛??먯뀑 ?뚯씪 ?ы븿, GitHub 遺덊븘??
 ca/
 
-# 시크릿 파일 (API 키, 토큰)
+# ?쒗겕由??뚯씪 (API ?? ?좏겙)
 _company/_agents/*/config.md
 _cache/
 
