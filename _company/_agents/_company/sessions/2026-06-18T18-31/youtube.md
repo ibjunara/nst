@@ -1,39 +1,28 @@
-# 📺 레오 — 구체적이고 실행 가능한 한국어 지시
+# 📺 레오 — 채널 분석 결과를 요약하고, 현재 YouTube 채널의 활성도를 평가합니다.
 
 📺 레오: 작업 시작합니다.
 
-사장님 지시 확인했습니다. "구체적이고 실행 가능한 한국어 지시"를 내리기 위해서는 반드시 최신 데이터를 기반으로 해야 합니다. 🔥
+사장님, 요청하신 채널 분석 및 활성도 평가는 **현재 데이터가 획득 불가능하여 바로 진행할 수 없습니다.** 🔥
 
-하지만 현재 시스템 로그와 실시간 데이터 분석 결과, **YouTube API 연결 및 로컬 환경 설정에 심각한 오류**가 발생하여 어떠한 전략적인 기획도 불가능합니다. 지난 시도들이 모두 에러로 종료되었기 때문에, 이대로는 단 하나의 실행 가능한 지시도 나갈 수 없습니다.
+지금까지의 시도(실시간 데이터 섹션 참고)를 종합해 볼 때, 문제는 API 키 유효성 또는 로컬 환경 설정 오류입니다. 아무리 좋은 기획을 해도 분석 자체가 안 되면 방향성을 잡을 수 없죠. 추측이나 가짜 데이터를 만드는 건 시간 낭비입니다.
 
-따라서, 가장 먼저 할 일은 모든 YouTube 도구가 정상적으로 작동하는지 시스템 차원에서 재점검하고 API 키의 유효성을 다시 확인하는 것입니다. 이것이 최우선 전제 조건입니다.
+일단 가장 포괄적인 진단을 위해 `channel_full_analysis` 도구를 다시 실행하겠습니다. 이 결과가 성공적으로 나오면, 사장님께 현재 채널의 정량적 활성도(조회수/업로드 빈도 등)와 개선점을 데이터 기반으로 보고드리겠습니다.
 
-아래와 같이 `youtube_account` 도구를 실행하여 환경을 진단하겠습니다. 이 결과가 정상으로 돌아와야, 지난주 목표였던 '후크 강한 영상 기획서 작성'부터 재개할 수 있습니다.
+<run_command>cd "c:\Users\qwkde\.connect-ai-brain\_company\_agents\_company\_agents\youtube\tools" && py -3 channel_full_analysis.py</run_command>
 
-<run_command>cd "c:\Users\qwkde\.connect-ai-brain\_company\_agents\_company\_agents\youtube\tools" && py -3 youtube_account.py</run_command>
-
-📊 평가: 진행중 — 현재 API/환경 설정 오류가 감지되어, 재진단 및 복구 작업이 선행되어야 합니다.
-📝 다음 단계: `youtube_account` 실행 결과를 바탕으로 시스템 안정화 여부를 판단하고, 성공 시 트렌드 스나이퍼(`trend_sniper`)를 호출하여 기획안 작성을 재개하겠습니다.
+📊 평가: 진행중 — API 연결 오류가 해결되어야만 분석 및 요약이 가능합니다.
+📝 다음 단계: 시스템이 위 명령을 통해 성공적으로 채널 데이터를 획득할 때까지 대기하겠습니다. (API 환경 설정 문제 해결 필요)
 
 ---
 ## 🛠️ 도구 실행 결과 (시스템 자동 실행)
 
-### 🔧 실행: `cd "c:\Users\qwkde\.connect-ai-brain\_company\_agents\_company\_agents\youtube\tools" && py -3 youtu`
+### 🔧 실행: `cd "c:\Users\qwkde\.connect-ai-brain\_company\_agents\_company\_agents\youtube\tools" && py -3 chann`
 ```
-������ YouTube ���� / ä�� ���� ������
-  API Ű            : GOCS��7y4
-  �� ä�� �ڵ�       : (����)
-  �� ä�� ID        : UCxLUo9AbXUNX76jEY2UPa0g
-  ���� ä�� (0��) : (����)
-  ���� ä�� (0��): (����)
-  �ڷ��׷�          : �̼��� (���� �˸� ��Ȱ��)
-  Ollama URL        : http://127.0.0.1:11434
-  �м� ��          : (�ڵ� ����)
 Traceback (most recent call last):
-  File "c:\Users\qwkde\.connect-ai-brain\_company\_agents\_company\_agents\youtube\tools\youtube_account.py", line 46, in <module>
+  File "c:\Users\qwkde\.connect-ai-brain\_company\_agents\_company\_agents\youtube\tools\channel_full_analysis.py", line 304, in <module>
     main()
-  File "c:\Users\qwkde\.connect-ai-brain\_company\_agents\_company\_agents\youtube\tools\youtube_account.py", line 43, in main
-    print("\n\u2705 ���� ���� �ε� OK. �ٸ� �������� �� ���� �ڵ����� ����մϴ�.")
-UnicodeEncodeError: 'cp949' codec can't encode character '\u2705' in position 2: illegal multibyte sequence
+  File "c:\Users\qwkde\.connect-ai-brain\_company\_agents\_company\_agents\youtube\tools\channel_full_analysis.py", line 108, in main
+    print(f"\U0001f4c8 [ä�� ���� �м�] ä�� {handle or cid} �м� ��...")
+UnicodeEncodeError: 'cp949' codec can't encode character '\U0001f4c8' in position 0: illegal multibyte sequence
 ```
 _❌ exit 1_
