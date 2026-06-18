@@ -14,3 +14,8 @@ ca/
 # 시크릿 파일 (API 키, 토큰)
 _company/_agents/*/config.md
 _cache/
+
+client_secrets.json
+token.json
+upload_token.json
+.env
