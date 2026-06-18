@@ -7,3 +7,10 @@ node_modules/
 *.log
 .cache/
 Thumbs.db
+
+# Connect AI 소스코드 (수만 개 에셋 파일 포함, GitHub 불필요)
+ca/
+
+# 시크릿 파일 (API 키, 토큰)
+_company/_agents/*/config.md
+_cache/
